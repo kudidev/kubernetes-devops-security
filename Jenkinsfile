@@ -32,15 +32,12 @@ pipeline {
     }
    stage('K8S Deployment - DEV') {
       steps {
-        
           "Deployment": {
             withKubeConfig([credentialsId: 'kubeconfig']) {
               sh "sed -i "#replace#kudidev/numeric-app$:V$BUILD_NUMBER#g" k8s_deployment_service.yaml"
               sh "kubectl apply -f k8s_deployment_service.yaml"
             }
-          },
-
-      
+          }
       }
     }
 }
