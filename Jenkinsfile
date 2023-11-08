@@ -25,15 +25,15 @@ pipeline {
       steps {
         withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
           sh 'printenv'
-          sh 'sudo docker build -t kudidev/numeric-app:""V$BUILD_NUMBER"" .'
-          sh 'docker push kudidev/numeric-app:""V$BUILD_NUMBER""'
+          sh 'sudo docker build -t kudidev/numeric-app:""V${BUILD_NUMBER}"" .'
+          sh 'docker push kudidev/numeric-app:""V${BUILD_NUMBER}""'
         }
       }
     }
    stage('K8S Deployment - DEV') {
       steps {
             withKubeConfig([credentialsId: 'kubeconfig']) {
-              sh "sed -i "s#replace#kudidev/numeric-app:V$BUILD_NUMBER#g" k8s_deployment_service.yaml"
+              sh "sed -i 's#replace#kudidev/numeric-app:V${BUILD_NUMBER}#g' k8s_deployment_service.yaml"
               sh "kubectl apply -f k8s_deployment_service.yaml"
             }
         
