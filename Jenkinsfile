@@ -37,6 +37,7 @@ pipeline {
           sh 'printenv'
           sh 'sudo docker build -t kudidev/numeric-app:""V${BUILD_NUMBER}"" .'
           sh 'docker push kudidev/numeric-app:""V${BUILD_NUMBER}""'
+          sh 'docker push kudidev/numeric-app:""latest}""'
         }
       }
     }
