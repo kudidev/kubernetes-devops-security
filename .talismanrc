@@ -1,5 +1,11 @@
-- filename: secfiles/file2
-  checksum: db9fd51050b83fcf1938ef6a7af8005dbb43e028b3a277784f6923513cea1622
+- filename: secfiles/password.txt
+  checksum: 1adb768c33e0b463fd7258f7ba42e57fcd62bb7ec13225dca62646c072925fdc
+- filename: github.pub
+  checksum: 84eda370ce4087df88903cfd2526dcdd8fdc08564cab97da8807d69a88f6bd4f
+- filename: github
+  checksum: b0a742bee277a3574a76372e19d16079ec3ee6b7f2a64bb0632b1593d10bafe1
 - filename: secfiles/file3
   checksum: 0eb89fd569f2528c80ebbb683530f3dfed55903b1fb7165bd3d620c20462c5a1
+- filename: secfiles/file2
+  checksum: db9fd51050b83fcf1938ef6a7af8005dbb43e028b3a277784f6923513cea1622
 
