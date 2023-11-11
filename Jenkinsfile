@@ -36,6 +36,7 @@ pipeline {
         withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
           sh 'printenv'
           sh 'sudo docker build -t kudidev/numeric-app:""V${BUILD_NUMBER}"" .'-01
+          sh 'sudo docker push kudidev/numeric-app:""V${BUILD_NUMBER}"" '
         }
       }
     }
