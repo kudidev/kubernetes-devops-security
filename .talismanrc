@@ -1,0 +1,5 @@
+- filename: secfiles/file2
+  checksum: db9fd51050b83fcf1938ef6a7af8005dbb43e028b3a277784f6923513cea1622
+- filename: secfiles/file3
+  checksum: 0eb89fd569f2528c80ebbb683530f3dfed55903b1fb7165bd3d620c20462c5a1
+
