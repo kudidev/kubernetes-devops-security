@@ -94,6 +94,8 @@
 			    <configuration>
 			     <format>ALL</format>
 			     <failBuildOnCVSS>8</failBuildOnCVSS> <!-- fail the build for CVSS greater than or equal to 9 -->
+				</configuration>
+			   </plugin>
 		</plugins>
 	</build>
 
